@@ -14,30 +14,24 @@
     <img src="../images/cart.png" alt="" class="w-8 h-8">
 
     <!-- this is mobile menu section -->
-
-    <div id="mobile-menu">
-        <a class="hamburger
-               md:hidden" href="#">
-            <img src="https://ljc-dev.github.io/testing0/ham.svg" alt="menu" class="w-8 h-8 bg-slate-100">
-        </a>
-    </div>
-    <nav class="md:hidden ">
-        <a class=" min-h-screen overflow-scroll
-         " href="#navbar">
-        <img src="https://ljc-dev.github.io/testing0/ham-close.svg" 
-        class="bg-black" alt="close">
-    </a>
-        <ul class="absolute  right-0
-                   flex flex-col bg-slate-500 
-                   w-[50%] p-4
-                   h-screen overflow-scroll
-                   " id="navbar">
+    <nav class="md:hidden" id="mobile-nav">
+        <ul class="menu
+           absolute right-0 top-[4rem]
+           flex flex-col bg-slate-500 
+           w-[50%] p-4 h-screen" 
+           id="menu">  
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">Contact</a></li>
-    
         </ul>
+        <a class="open
+                md:hidden" href="#menu">
+            <img src="https://ljc-dev.github.io/testing0/ham.svg" alt="menu" class="w-8 h-8 bg-slate-100">
+        </a>
+        <a class="close" href="#">
+            <img src="https://ljc-dev.github.io/testing0/ham-close.svg" 
+            class="bg-black" alt="close">
+        </a>
     </nav>
 </header>
-

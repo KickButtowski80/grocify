@@ -3,8 +3,43 @@
 @tailwind utilities;
 
 
-.navbar:target {
-    /* hide navbar */
-    display: none;
-  }
+.menu {
+  /* position: absolute; */
+  /* give the menu a larger z-index than the ham link
+  to put the menu above it */
+  /* z-index: 100; */
+  /* width: 50%;
+  height: 100vh; */
+  /* basic menu styling*/
+  /* list-style: none;
+  background: black; */
+  /* display: flex;
 
+  flex-direction: column; */
+  /* animate slide up/down */
+  /* transform: translateY(0%);
+  transition: transform 0.2s ease; */
+  display: none;
+}
+
+
+#menu:target {
+  display: block;
+}
+#menu:not(:target) {
+  display: none;
+}
+
+#menu:target ~ .open{
+  display: none;
+}
+#menu:not(:target) ~ .open {
+  display: block;
+}
+
+#menu:target ~ .close {
+  display: block;
+}
+#menu:not(:target) ~ .close {
+  display: none;
+}
