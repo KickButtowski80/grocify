@@ -1,10 +1,10 @@
 <!-- header.html -->
 <header class="bg-slate-700 p-4
             flex justify-around
-            sticky top-0">
+            sticky z-2 top-0">
     <img src="../images/logo.png" alt="" class=" h-8">
     <nav class="hidden md:flex">
-        <ul class="flex space-x-10 text-white">
+        <ul class="md:flex space-x-10 text-white">
             <li><a href="/" class="hover:underline">Home</a></li>
             <li><a href="/about" class="hover:underline">About</a></li>
             <li><a href="/about" class="hover:underline">Features</a></li>
@@ -16,9 +16,10 @@
     <!-- this is mobile menu section -->
     <nav class="md:hidden" id="mobile-nav">
         <ul class="menu
+        md:hidden
            absolute right-0 top-[4rem]
            flex flex-col bg-slate-500 
-           w-[50%] p-4 h-screen" 
+           w-[50%] p-4 min-h-screen" 
            id="menu">  
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -27,11 +28,12 @@
         </ul>
         <a class="open
                 md:hidden" href="#menu">
-            <img src="https://ljc-dev.github.io/testing0/ham.svg" alt="menu" class="w-8 h-8 bg-slate-100">
+            <img src="https://ljc-dev.github.io/testing0/ham.svg" alt="menu"
+             class="w-8 h-8 bg-slate-100">
         </a>
         <a class="close" href="#">
             <img src="https://ljc-dev.github.io/testing0/ham-close.svg" 
-            class="bg-black" alt="close">
+            class="w-8 h-8 bg-slate-900" alt="close">
         </a>
     </nav>
 </header>

@@ -2,44 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-
+header {
+  position: sticky;
+  z-index: 999999
+}
 .menu {
-  /* position: absolute; */
-  /* give the menu a larger z-index than the ham link
-  to put the menu above it */
-  /* z-index: 100; */
-  /* width: 50%;
-  height: 100vh; */
-  /* basic menu styling*/
-  /* list-style: none;
-  background: black; */
-  /* display: flex;
+ /* animate slide up/down */
+  transform: translateY(110%);
+  transition: transform 1s ease;
+}
 
-  flex-direction: column; */
-  /* animate slide up/down */
-  /* transform: translateY(0%);
-  transition: transform 0.2s ease; */
+
+.menu:target {
+  /* display: block; */
+
+  transform: translateY(0%);
+}
+/* display none cannot work with tarnsform 
+.menu:not(:target) {
+  display: none;
+} */
+
+
+
+.menu:target ~ .open{
   display: none;
 }
-
-
-#menu:target {
-  display: block;
-}
-#menu:not(:target) {
-  display: none;
-}
-
-#menu:target ~ .open{
-  display: none;
-}
-#menu:not(:target) ~ .open {
+.menu:not(:target) ~ .open {
   display: block;
 }
 
-#menu:target ~ .close {
+.menu:target ~ .close {
   display: block;
 }
-#menu:not(:target) ~ .close {
+.menu:not(:target) ~ .close {
   display: none;
 }
