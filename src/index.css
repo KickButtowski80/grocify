@@ -14,19 +14,19 @@
   transform: translateY(0%);
 }
 
-/* display none cannot work with tarnsform 
-.menu:not(:target) {
-  display: none;
-} */
+.menu:not(:target) ~ .open  {
+  display: block;
+}
+
 
 .menu:target ~  .open{
   display: none;
 }
 
-.menu:target ~  .close {
+.menu:target ~  .open + .close {
   display: block;
 }
 
-.menu:not(:target) ~  .close {
+.menu:not(:target) ~  .open + .close {
   display: none;
 }
