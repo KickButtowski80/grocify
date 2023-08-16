@@ -8,22 +8,18 @@ header {
 }
 .menu {
  /* animate slide up/down */
-  transform: translateY(110%);
+  transform: translateY(-110%);
   transition: transform 1s ease;
 }
 
 
 .menu:target {
-  /* display: block; */
-
   transform: translateY(0%);
 }
 /* display none cannot work with tarnsform 
 .menu:not(:target) {
   display: none;
 } */
-
-
 
 .menu:target ~ .open{
   display: none;
