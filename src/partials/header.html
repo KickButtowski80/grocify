@@ -1,15 +1,4 @@
 <!-- header.html -->
-<ul class="menu
-md:hidden
-absolute right-0 top-[4rem] -z-50
-flex flex-col bg-slate-500 
-w-[50%] p-4 min-h-screen" id="menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Features</a></li>
-    <li><a href="#">Contact</a></li>
-</ul>
-
 <header class="bg-slate-700 p-4
             flex justify-around
             ">
@@ -25,11 +14,20 @@ w-[50%] p-4 min-h-screen" id="menu">
     <img src="../images/cart.png" alt="" class="w-8 h-8">
 
     <!-- this is mobile menu section -->
-    <a class="open
-        md:hidden" href="#menu">
+    <ul class="menu
+        md:hidden
+        absolute right-0 top-[4rem] -z-50
+        flex flex-col bg-slate-500 
+        w-[50%] p-4 min-h-screen" id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <a class="open md:hidden" href="#menu">
         <img src="https://ljc-dev.github.io/testing0/ham.svg" alt="menu" class="w-8 h-8 bg-slate-100">
     </a>
     <a class="close md:hidden" href="#">
         <img src="https://ljc-dev.github.io/testing0/ham-close.svg" class="w-8 h-8 bg-slate-900" alt="close">
-    </a>    
+    </a>
 </header>

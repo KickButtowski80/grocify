@@ -13,22 +13,20 @@
 .menu:target {
   transform: translateY(0%);
 }
+
 /* display none cannot work with tarnsform 
 .menu:not(:target) {
   display: none;
 } */
 
-.menu:target + header .open{
+.menu:target ~  .open{
   display: none;
 }
-.menu:not(:target) + header .open {
+
+.menu:target ~  .close {
   display: block;
 }
 
-.menu:target + header .close {
-  display: block;
-}
-
-.menu:not(:target) + header .close {
+.menu:not(:target) ~  .close {
   display: none;
 }
