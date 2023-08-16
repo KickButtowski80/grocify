@@ -2,7 +2,7 @@
 	"name": "my-project",
 	"source": "src/index.html",
 	"scripts": {
-		"dev": "rm -rf .parcel-cache && parcel",
+		"dev": "rm -rf .parcel-cache .cache dist && parcel",
 		"build": "npx parcel src/index.html",
 		"clean": "rm -rf dist/*"
 	},
